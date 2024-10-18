@@ -21,7 +21,7 @@ extension ControladorPantallaPrincipalDeColeccion: UICollectionViewDelegateFlowL
     // Modifica el inset de las vistas
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        var margin = CGFloat(25)
+        let margin = CGFloat(25)
     
         return UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin)
     }

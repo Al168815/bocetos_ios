@@ -29,7 +29,7 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController{
                         }
                     }
                     else {
-                        print(respuesta)
+                        print(respuesta!)
                     }
                 } catch {
                     print("Error")
@@ -95,11 +95,16 @@ class ControladorPantallaPrincipalDeColeccion: UICollectionViewController{
         
         let pantalla_de_publicacion = storyboard?.instantiateViewController(withIdentifier: "PantallaPublicacion") as! ControladorPantallaDelPost
         
+        pantalla_de_publicacion.id_publicacion = self.lista_de_publicaciones[indexPath.item].id
+        
         self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
         
+        
+        
+        //self.navigationController?.pushViewController(pantalla_de_publicacion, animated: true)
+        
        // print(self.navigationController)
-        return celda
-
+        
     }
 
     // MARK: UICollectionViewDelegate
